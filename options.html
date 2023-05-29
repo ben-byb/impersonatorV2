@@ -1,0 +1,78 @@
+<html>
+  <body>
+    <div class="center">
+      <div class="titleRow">
+        <img src="icon.png" alt="Before You Bid" width="20" height="20" style="margin-right: 4px">
+      <h3 id="backyardEnvironment">Impersonating</h2>
+      </div>
+      <br />
+      <div id="people">
+        <div class="loading">Loading...</div>
+      </div>
+      <div id="saveRegion">
+        <button id="save">Store current user</button>
+        <br />
+        <button id="reset">Reset current users</button>
+      </div>
+    </div>
+    <style>
+      html {
+        background-color: #2F4858;
+        color: #A0E8AF;
+      }
+      body {
+        min-width: 250px;
+        min-height: 250px;
+        margin: 0;
+        padding: 8px 8px 0px 8px;
+      }
+      h1, h2, h3 {
+        color: #5BD776;
+      }
+      #saveRegion {
+        display: flex;
+        padding-bottom: 8px;
+      }
+      #saveRegion #save {
+        margin-right: 8px;
+      }
+      #saveRegion:not(.loaded) {
+        visibility: hidden;
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .loading {
+        visibility: hidden;
+      }
+      #people {
+        margin-bottom: 16px;
+        flex-grow: 1;
+      }
+      #people .person {
+        margin-bottom: 8px;
+      }
+      #people:not(.loaded) .loading {
+        visibility: visible;
+      }
+      #people .person {
+        cursor: pointer;
+        text-align: center;
+      }
+      #people .person:hover {
+        color: #70dc87;
+      }
+      .titleRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script src="options.js"></script>
+  </body>
+</html>

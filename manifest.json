@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Impersonator",
+  "description": "For automating impersonation on BYB backyard",
+  "version": "0.0.1",
+  "permissions": ["activeTab", "storage"],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:3001/*",
+        "https://dev-backyard.beforeyoubid.com.au/*",
+        "https://qa-backyard.beforeyoubid.com.au/*",
+        "https://staging-backyard.beforeyoubid.com.au/*",
+        "https://backyard.beforeyoubid.com.au/*"
+      ],
+      "js": ["background.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Impersonator",
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
